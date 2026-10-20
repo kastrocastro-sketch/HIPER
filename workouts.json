@@ -1,0 +1,410 @@
+[
+  {
+    "id": 0,
+    "short": "SEG",
+    "name": "Push A",
+    "focus": "Peitoral prioritário",
+    "exercises": [
+      {
+        "id": "0-0",
+        "name": "Supino articulado convergente",
+        "sets": 3,
+        "reps": "6–10",
+        "rest": "2–3 min",
+        "steps": "Ajuste as alças na linha do peito. Empurre mantendo ombros apoiados e retorne controlando.",
+        "alternative": "Supino horizontal máquina"
+      },
+      {
+        "id": "0-1",
+        "name": "Supino inclinado máquina",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Regule o banco inclinado e empurre sem elevar os ombros. Controle a descida.",
+        "alternative": "Supino inclinado articulado"
+      },
+      {
+        "id": "0-2",
+        "name": "Crucifixo peck deck",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "75–90 s",
+        "steps": "Ajuste o banco; aproxime os braços à frente do peito sem bater as alças.",
+        "alternative": "Crossover na polia"
+      },
+      {
+        "id": "0-3",
+        "name": "Desenvolvimento de ombro máquina",
+        "sets": 2,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Mantenha tronco apoiado e punhos alinhados. Empurre para cima com controle.",
+        "alternative": "Shoulder press articulado"
+      },
+      {
+        "id": "0-4",
+        "name": "Elevação lateral máquina",
+        "sets": 3,
+        "reps": "12–20",
+        "rest": "60–90 s",
+        "steps": "Eleve até aproximadamente a linha dos ombros sem impulso.",
+        "alternative": "Elevação lateral na polia"
+      },
+      {
+        "id": "0-5",
+        "name": "Tríceps polia barra V",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "75–90 s",
+        "steps": "Cotovelos próximos ao corpo; estenda e retorne lentamente.",
+        "alternative": "Tríceps máquina"
+      },
+      {
+        "id": "0-6",
+        "name": "Tríceps corda acima da cabeça",
+        "sets": 2,
+        "reps": "10–15",
+        "rest": "75–90 s",
+        "steps": "Cotovelos estáveis; estenda sem compensar com a lombar.",
+        "alternative": "Tríceps unilateral na polia"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "short": "TER",
+    "name": "Legs A",
+    "focus": "Quadríceps",
+    "exercises": [
+      {
+        "id": "1-0",
+        "name": "Leg press 45°",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2–3 min",
+        "steps": "Pés na largura dos ombros; flexione até amplitude confortável, mantendo lombar apoiada.",
+        "alternative": "Hack squat"
+      },
+      {
+        "id": "1-1",
+        "name": "Hack squat ou Smith",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2–3 min",
+        "steps": "Joelhos alinhados aos pés; desça e suba com controle, sem dor.",
+        "alternative": "Leg press"
+      },
+      {
+        "id": "1-2",
+        "name": "Cadeira extensora",
+        "sets": 2,
+        "reps": "10–15",
+        "rest": "90 s",
+        "steps": "Alinhe o eixo com o joelho; eleve e desça de forma controlada.",
+        "alternative": "Leg press com foco em quadríceps"
+      },
+      {
+        "id": "1-3",
+        "name": "Mesa flexora",
+        "sets": 2,
+        "reps": "10–15",
+        "rest": "90 s",
+        "steps": "Mantenha quadril no apoio; flexione o joelho e retorne lentamente.",
+        "alternative": "Cadeira flexora"
+      },
+      {
+        "id": "1-4",
+        "name": "Cadeira adutora",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "75 s",
+        "steps": "Feche as pernas com controle, sem bater os pesos.",
+        "alternative": "Adutora em polia"
+      },
+      {
+        "id": "1-5",
+        "name": "Panturrilha sentada",
+        "sets": 3,
+        "reps": "10–15",
+        "rest": "75–90 s",
+        "steps": "Eleve os calcanhares ao máximo e alongue lentamente na descida.",
+        "alternative": "Panturrilha leg press"
+      },
+      {
+        "id": "1-6",
+        "name": "Abdominal máquina",
+        "sets": 3,
+        "reps": "10–15",
+        "rest": "60–90 s",
+        "steps": "Flexione o tronco aproximando costelas do quadril sem puxar com os braços.",
+        "alternative": "Crunch na polia"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "short": "QUA",
+    "name": "Pull A",
+    "focus": "Costas e bíceps",
+    "exercises": [
+      {
+        "id": "2-0",
+        "name": "Puxada alta neutra",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Puxe os cotovelos para baixo e mantenha o tronco estável.",
+        "alternative": "Puxada articulada"
+      },
+      {
+        "id": "2-1",
+        "name": "Remada articulada com apoio",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Peito apoiado; conduza os cotovelos para trás sem impulso.",
+        "alternative": "Remada baixa máquina"
+      },
+      {
+        "id": "2-2",
+        "name": "Pulldown braço reto",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "75 s",
+        "steps": "Braços quase estendidos; mova a barra em arco até próximo das coxas.",
+        "alternative": "Pullover máquina"
+      },
+      {
+        "id": "2-3",
+        "name": "Crucifixo inverso máquina",
+        "sets": 3,
+        "reps": "12–20",
+        "rest": "75–90 s",
+        "steps": "Abra os braços mantendo ombros baixos e peito apoiado.",
+        "alternative": "Face pull"
+      },
+      {
+        "id": "2-4",
+        "name": "Rosca Scott máquina",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "90 s",
+        "steps": "Braços apoiados; suba e desça sem perder a posição.",
+        "alternative": "Rosca Scott na polia"
+      },
+      {
+        "id": "2-5",
+        "name": "Rosca EZ na polia",
+        "sets": 3,
+        "reps": "10–15",
+        "rest": "75–90 s",
+        "steps": "Cotovelos estáveis junto ao corpo; não balance o tronco.",
+        "alternative": "Rosca máquina"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "short": "QUI",
+    "name": "Push B",
+    "focus": "Peito e braços",
+    "exercises": [
+      {
+        "id": "3-0",
+        "name": "Supino inclinado articulado",
+        "sets": 3,
+        "reps": "6–10",
+        "rest": "2–3 min",
+        "steps": "Peito alto, escápulas apoiadas; empurre e retorne controlando.",
+        "alternative": "Supino inclinado máquina"
+      },
+      {
+        "id": "3-1",
+        "name": "Supino horizontal máquina",
+        "sets": 2,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Alças na altura do peito; empurre sem perder apoio.",
+        "alternative": "Supino articulado"
+      },
+      {
+        "id": "3-2",
+        "name": "Crossover na polia",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "75–90 s",
+        "steps": "Mantenha cotovelos levemente flexionados; aproxime as mãos à frente.",
+        "alternative": "Peck deck"
+      },
+      {
+        "id": "3-3",
+        "name": "Elevação lateral máquina",
+        "sets": 3,
+        "reps": "12–20",
+        "rest": "60–90 s",
+        "steps": "Eleve lateralmente sem encolher os ombros.",
+        "alternative": "Elevação lateral na polia"
+      },
+      {
+        "id": "3-4",
+        "name": "Tríceps máquina/mergulho assistido",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "90 s",
+        "steps": "Ajuste a máquina; estenda cotovelos sem afundar os ombros.",
+        "alternative": "Tríceps barra V"
+      },
+      {
+        "id": "3-5",
+        "name": "Tríceps corda polia",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "75 s",
+        "steps": "Estenda para baixo com cotovelos fixos.",
+        "alternative": "Tríceps barra V"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "short": "SEX",
+    "name": "Legs B",
+    "focus": "Posteriores e glúteos",
+    "exercises": [
+      {
+        "id": "4-0",
+        "name": "Cadeira flexora",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "90 s",
+        "steps": "Flexione os joelhos sem levantar o quadril do apoio.",
+        "alternative": "Mesa flexora"
+      },
+      {
+        "id": "4-1",
+        "name": "Mesa flexora",
+        "sets": 2,
+        "reps": "10–15",
+        "rest": "90 s",
+        "steps": "Mantenha a pelve estável; faça movimento controlado.",
+        "alternative": "Cadeira flexora"
+      },
+      {
+        "id": "4-2",
+        "name": "Leg press unilateral",
+        "sets": 2,
+        "reps": "10–12/lado",
+        "rest": "90 s",
+        "steps": "Comece pelo lado esquerdo. Mantenha a mesma amplitude e repetições em ambos.",
+        "alternative": "Leg press bilateral leve"
+      },
+      {
+        "id": "4-3",
+        "name": "Hip thrust máquina",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Eleve o quadril mantendo o tronco estável; não hiperestenda a lombar.",
+        "alternative": "Glute drive"
+      },
+      {
+        "id": "4-4",
+        "name": "Cadeira extensora",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "90 s",
+        "steps": "Alinhe o equipamento e estenda o joelho em amplitude confortável.",
+        "alternative": "Leg press"
+      },
+      {
+        "id": "4-5",
+        "name": "Panturrilha leg press",
+        "sets": 3,
+        "reps": "10–15",
+        "rest": "75–90 s",
+        "steps": "Movimente o tornozelo sem flexionar excessivamente os joelhos.",
+        "alternative": "Panturrilha sentada"
+      },
+      {
+        "id": "4-6",
+        "name": "Prancha",
+        "sets": 3,
+        "reps": "20–40 s",
+        "rest": "60 s",
+        "steps": "Mantenha tronco firme e respiração natural, sem deixar a lombar ceder.",
+        "alternative": "Dead bug"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "short": "SÁB",
+    "name": "Pull B",
+    "focus": "Bíceps prioritário",
+    "exercises": [
+      {
+        "id": "5-0",
+        "name": "Remada baixa máquina/cabo neutro",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Puxe as alças na direção do tronco mantendo coluna neutra.",
+        "alternative": "Remada articulada"
+      },
+      {
+        "id": "5-1",
+        "name": "Puxada alta pegada média",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Puxe à parte alta do peito sem balançar o tronco.",
+        "alternative": "Puxada neutra"
+      },
+      {
+        "id": "5-2",
+        "name": "Remada unilateral máquina",
+        "sets": 2,
+        "reps": "10–12/lado",
+        "rest": "90 s",
+        "steps": "Puxe cada lado mantendo quadril e tronco estáveis.",
+        "alternative": "Remada unilateral na polia"
+      },
+      {
+        "id": "5-3",
+        "name": "Crucifixo inverso máquina",
+        "sets": 2,
+        "reps": "12–20",
+        "rest": "75 s",
+        "steps": "Abra os braços para trás sem impulso.",
+        "alternative": "Face pull"
+      },
+      {
+        "id": "5-4",
+        "name": "Rosca bíceps máquina unilateral",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "90 s",
+        "steps": "Braço bem apoiado; eleve e abaixe com controle.",
+        "alternative": "Rosca Scott cabo unilateral"
+      },
+      {
+        "id": "5-5",
+        "name": "Rosca corda na polia",
+        "sets": 3,
+        "reps": "10–15",
+        "rest": "75 s",
+        "steps": "Flexione cotovelos sem usar balanço.",
+        "alternative": "Rosca EZ na polia"
+      },
+      {
+        "id": "5-6",
+        "name": "Crunch ajoelhado na polia",
+        "sets": 3,
+        "reps": "12–15",
+        "rest": "75 s",
+        "steps": "Flexione o tronco aproximando costelas do quadril, sem puxar com os braços.",
+        "alternative": "Abdominal máquina"
+      }
+    ]
+  }
+]

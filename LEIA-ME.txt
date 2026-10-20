@@ -1,0 +1,8 @@
+Projeto Hipertrofia • Lucas | Versão 2.0
+
+1. Abra index.html no navegador para testar.
+2. Para instalar no Android e funcionar offline como PWA, hospede a pasta inteira em HTTPS (ex.: GitHub Pages ou Netlify).
+3. Os registros da versão 1.0 continuam se você usar a mesma origem do navegador e não apagar dados.
+4. Antes de mudar de navegador, site ou celular, exporte um backup em Ajustes e depois importe no novo app.
+5. Referências 3D são ilustrações geradas por IA e não substituem a orientação profissional.
+6. Os gráficos usam apenas dados que você registrar.

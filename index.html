@@ -1,0 +1,511 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#07110f"><meta name="description" content="Treinos e evolução de hipertrofia do Lucas"><link rel="manifest" href="manifest.webmanifest"><title>Projeto Hipertrofia · Lucas</title><style>
+:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:#07110f;color:#eefcf4;color-scheme:dark}*{box-sizing:border-box}body{margin:0;padding-bottom:105px;background:radial-gradient(ellipse at 80% -15%,#154e39 0,transparent 42%),#07110f;min-height:100vh}header{padding:22px 18px 15px;max-width:880px;margin:auto}small,.muted{color:#94afa4}h1{font-size:28px;letter-spacing:-.7px;margin:4px 0}h2{font-size:20px;margin:12px 0}h3{margin:0;font-size:16px}.accent{color:#6ce6a3}.subtitle{font-size:13px;color:#a4beb0}.container{padding:0 14px;max-width:880px;margin:auto}.card{border:1px solid #315745;background:#0d201a;border-radius:19px;padding:16px;margin:12px 0;box-shadow:0 4px 20px #0002}.hero{background:linear-gradient(140deg,#123d2c,#0b1c16);border:1px solid #387c56;padding:20px;border-radius:24px}.hero h2{font-size:24px}.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border:1px solid #30694a;background:#173c2b;border-radius:30px;font-size:12px;color:#b8eaca;margin:4px 4px 4px 0}.week{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:12px 0}.day{border:1px solid #315745;border-radius:15px;padding:11px 6px;background:#0e261b;color:white;text-align:center;cursor:pointer}.day strong{display:block;font-size:14px}.day span{font-size:11px;color:#a1b5a8}.day.active{background:#218554;border-color:#78efa9}.day.active span{color:#edfff3}button{font:inherit;cursor:pointer}.btn{border:0;background:#49c982;color:#062214;font-weight:800;padding:12px 15px;border-radius:13px}.btn.secondary{background:#1d342a;color:#d2ffe0;border:1px solid #315b43}.btn.outline{background:transparent;border:1px solid #438661;color:#a4e6bd}.btn:disabled{opacity:.45;cursor:not-allowed}.btn.full{width:100%}.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.ex{border:1px solid #274938;border-radius:15px;background:#0b1b15;margin:10px 0;overflow:hidden}.exhead{display:flex;gap:10px;align-items:center;padding:12px;cursor:pointer}.num{width:30px;height:30px;flex-shrink:0;border-radius:10px;background:#1d7148;color:#dffff0;display:grid;place-items:center;font-weight:800}.exbody{padding:0 12px 13px;border-top:1px solid #244533}.sets{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.setline{display:flex;align-items:center;gap:8px;background:#163125;border:1px solid #315b43;border-radius:12px;padding:8px;margin-bottom:7px}.setline label{min-width:42px;font-size:12px;color:#b9d5c5}.setline input{width:72px;min-width:0;padding:9px 5px;border:1px solid #386049;background:#091910;color:#fff;border-radius:8px;font-size:14px;text-align:center}.setline .reps{width:62px}.check{width:28px;height:28px;accent-color:#4aca81;cursor:pointer}input,textarea{font:inherit}input[type=number]{font-variant-numeric:tabular-nums}.steps{color:#bdd4c6;font-size:13px;line-height:1.55;margin:10px 0}.field{width:100%;padding:12px;background:#0a1712;border:1px solid #386049;color:white;border-radius:11px;margin-top:4px}nav{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:space-around;background:#06120ef7;border-top:1px solid #2e5a41;z-index:10;padding:10px 3px calc(env(safe-area-inset-bottom) + 10px)}nav button{border:0;background:none;color:#9db7a9;font-size:12px;padding:7px 11px;min-width:65px}nav button.active{color:#75f3a8;font-weight:800}nav span{display:block;font-size:23px;margin-bottom:4px}.hidden{display:none!important}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.metric{border:1px solid #2a523c;background:#10251b;padding:13px;border-radius:14px}.metric b{font-size:22px;display:block;color:#74ef9d}.metric span{font-size:12px;color:#a0b9a8}.log{border-bottom:1px solid #244935;padding:10px 2px;font-size:13px}.log:last-child{border:0}.banner{background:#35280e;border:1px solid #6e5626;color:#ffe4aa;padding:12px;border-radius:13px;font-size:12px;line-height:1.5;margin:12px 0}.hint{font-size:12px;color:#9cbaa9;line-height:1.55}.timer{position:sticky;top:4px;z-index:5;background:#123c2b;border:1px solid #347d53;border-radius:14px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.line{height:1px;background:#284b37;margin:14px 0}@media(min-width:650px){.week{grid-template-columns:repeat(6,1fr)}h1{font-size:35px}}
+
+/* Versão 2.0 */
+.v2-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px}.version{font-size:11px;color:#a9ecc3;border:1px solid #326d4a;padding:5px 9px;border-radius:20px}.btn.tiny{font-size:12px;padding:8px 10px}.banner.good{background:#0e2b20;border-color:#2f7950;color:#b9f7d1}
+.chartbox{background:#071a13;border:1px solid #2d563e;border-radius:16px;padding:12px;margin-top:12px;overflow:hidden}.chartbox svg{width:100%;height:auto;display:block}.chart-header{display:flex;gap:8px;justify-content:space-between;align-items:center;flex-wrap:wrap}.chart-header h3{margin:0;font-size:15px}.chart-point{fill:#6ce6a3;stroke:#10291e;stroke-width:2}.chart-line{fill:none;stroke:#72eaaa;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.chart-fill{fill:#46bc7940}.axis{stroke:#40624f;stroke-width:1}.chartlabel{font:12px system-ui;fill:#accbb7}.chartvalue{font:13px system-ui;fill:#e7ffef}.progress-pill{display:inline-block;background:#163f2b;color:#a7efc0;border:1px solid #377a50;border-radius:9px;font-size:12px;padding:4px 8px;margin:4px 5px 0 0}.insight{border-left:3px solid #66dc92;padding:10px 12px;background:#122a1e;border-radius:0 10px 10px 0;color:#d7f7df;font-size:13px;line-height:1.55}.art-frame{background:#071611;border:1px solid #2c6547;border-radius:15px;overflow:hidden;margin-top:12px}.art-frame img{display:block;width:100%;max-height:520px;object-fit:contain}.art-frame summary{padding:12px;cursor:pointer;font-weight:700;color:#b2f1c8}.art-frame .hint{padding:0 12px 12px}.chart-select{padding:10px;border:1px solid #3b7654;border-radius:10px;background:#11271b;color:#fff;max-width:100%;font:inherit}.readout{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.readout>div{flex:1;min-width:100px;border-radius:12px;padding:10px;background:#153626}.readout b{display:block;color:#91f2b3;font-size:18px}.readout small{font-size:11px}.helper{font-size:12px;color:#a1c8b4;line-height:1.5}.quick-image{width:100%;border-radius:12px;max-height:380px;object-fit:contain;background:#0a1610}.nav-source{font-size:11px;color:#a8b7ab;padding:8px 0}details>summary{cursor:pointer}.value-note{font-size:11px;color:#9bbdaa}.metric b{font-size:20px}
+</style></head><body><header><div class="row"><div><small>🦁 LUCAS • 12 SEMANAS <span class="version">VERSÃO 3.0</span></small><h1>PROJETO <span class="accent">HIPERTROFIA</span></h1><div class="subtitle">Treino inteligente. Evolução registrada.</div></div><div style="font-size:32px">💪</div></div></header><main class="container">
+<section id="tab-treino"><div class="hero"><div class="row"><div><div class="muted" style="font-size:12px">TREINO SELECIONADO</div><h2 id="workoutTitle"></h2><div id="workoutFocus" class="subtitle"></div></div><div style="font-size:32px">🏋️</div></div><div class="week" id="week"></div><div class="row"><span id="workoutCount" class="pill"></span><span class="pill">6 dias/semana</span></div></div><div class="banner">⚠️ Pós-bariátrica: como houve perda de peso e cansaço, não aumente cargas ou volume se houver baixa ingestão, tontura ou recuperação ruim. Reavalie exames e alimentação com a equipe bariátrica.</div><div id="timer" class="timer hidden"><div><small>DESCANSO</small><div style="font-size:24px;font-weight:800" id="timeLeft">01:30</div></div><div><button class="btn secondary" id="pauseTimer">Pausar</button> <button class="btn outline" id="stopTimer">✕</button></div></div><details class="art-frame"><summary>🧍 Ver referências 3D do treino selecionado</summary><img id="dayArt" alt="Referências visuais do dia de treino" loading="lazy"><p class="hint">Ilustrações geradas por IA. Podem apresentar erros de postura ou detalhes de equipamento; confira a execução com profissional habilitado.</p></details><div id="lastExerciseInsight" class="insight" style="margin:12px 0">Registre e conclua séries para receber comparações com sessões anteriores.</div><div id="exerciseList"></div><button id="saveWorkout" class="btn full" style="margin:10px 0 24px">✓ Salvar sessão de treino</button></section>
+<section id="tab-evolucao" class="hidden"><h2>📊 Dashboard de evolução</h2><div class="stats" id="statGrid"></div><div class="card"><h3>📈 Tendências corporais</h3><div class="chartbox"><div class="chart-header"><h3>Peso e cintura</h3><select class="chart-select" id="measureMetric"><option value="weight">Peso (kg)</option><option value="waist">Cintura (cm)</option></select></div><div id="bodyChart"></div></div><p class="helper">Compare medidas nas mesmas condições e observe tendências, não números isolados.</p></div><div class="card"><h3>🏋️ Evolução das cargas</h3><p class="helper">Exibe a melhor série <b>concluída</b> de cada sessão. Sem projeções fictícias.</p><select id="exerciseMetric" class="chart-select" aria-label="Escolher exercício"></select><div class="chartbox"><div class="chart-header"><h3 id="strengthLabel">Histórico de carga</h3></div><div id="strengthChart"></div></div><div id="strengthSummary" class="readout"></div></div><div class="card"><h3>📐 Medidas detalhadas</h3><p class="helper">Campos opcionais. Registre sempre nos mesmos pontos anatômicos.</p><div class="stats" id="detailInput"></div><button id="saveDetail" class="btn full" style="margin-top:12px">Salvar medidas detalhadas</button><div id="detailHistory"></div></div><div class="card"><h3>Registrar medida corporal</h3><div class="hint">Peso e cintura ajudam a acompanhar recomposição. Não interprete mudanças isoladas como ganho ou perda de músculo.</div><div class="row"><div style="flex:1"><label class="hint">Peso (kg)</label><input id="weight" type="number" inputmode="decimal" step=".1" placeholder="71" class="field"></div><div style="flex:1"><label class="hint">Cintura (cm)</label><input id="waist" type="number" inputmode="decimal" step=".1" placeholder="89" class="field"></div></div><button id="saveMeasure" class="btn" style="margin-top:12px">Salvar medidas</button></div><div class="card"><h3>Últimas medidas</h3><div id="measureHistory"></div></div><div class="card"><h3>Histórico de treinos</h3><div id="sessionHistory"></div></div></section>
+<section id="tab-guia" class="hidden"><h2>📚 Guia rápido</h2><div class="card"><h3>Como progredir em 12 semanas</h3><p class="steps">Semanas 1–2: adaptação, RIR 3.<br>Semanas 3–5: RIR 2; aumento de 2–5% quando atingir o topo da faixa com boa técnica.<br>Semana 6: reduzir volume a 50–60%.<br>Semanas 7–10: retornar gradualmente; RIR 1 em isoladores apenas se recuperado.<br>Semana 11: consolidar.<br>Semana 12: reavaliar medidas, cintura, cargas e recuperação.</p><small>RIR = repetições que ainda seria capaz de fazer com boa técnica.</small></div><div class="card"><h3>Cuidados e execução</h3><p class="steps">• Aquecer e fazer 1–3 séries leves nos primeiros exercícios grandes.<br>• Manter amplitude sem dor; joelhos alinhados aos pés.<br>• Punho incomodou? Preferir pegada neutra ou substituição.<br>• Não buscar falha em todas as séries.<br>• Cardio leve de 20–25 min, 2 vezes por semana.<br>• Interromper o treino se houver tontura, palpitação ou mal-estar.</p></div><div class="card"><h3>Referências do teu programa</h3><p class="steps">71 kg · 20% GC estimada · cintura 89 cm<br>Prioridades: peitoral, braços, abdômen e pernas.<br>Preferência: máquinas.<br>Treino orientativo, a ajustar com profissional de educação física e equipe bariátrica.</p></div></section>
+<section id="tab-ajustes" class="hidden"><h2>⚙️ Dados e ajustes</h2><div class="banner good">✅ Compatível com os registros da versão 1.0 <b>neste mesmo navegador e origem</b>. Antes de trocar de celular, exporte o backup.</div><div class="card"><h3>Seus registros ficam neste dispositivo</h3><p class="hint">Os registros usam armazenamento local do navegador. Se limpar os dados do navegador ou trocar de aparelho, eles podem desaparecer. Faça cópias de segurança.</p><button id="exportData" class="btn full">⬇ Exportar backup (.json)</button><label class="btn secondary full" style="display:block;text-align:center;margin-top:10px">⬆ Importar backup<input id="importData" type="file" accept="application/json,.json" style="display:none"></label></div><div class="card"><h3>☁️ Sincronização na nuvem (opcional)</h3>
+<p class="hint">A V3 pode conectar-se a um projeto Supabase privado com autenticação e políticas de acesso por usuário (RLS). Até configurar, o aplicativo continua 100% local. Seus dados não são enviados automaticamente.</p>
+<label class="hint">URL do projeto Supabase<input class="field" id="cloudUrl" placeholder="https://xxxx.supabase.co" autocomplete="url"></label>
+<label class="hint">Chave pública (anon/publishable)<input class="field" id="cloudKey" placeholder="sb_publishable_... ou chave anon"></label>
+<p class="hint">Nunca coloque a chave service_role/secret aqui. A chave pública é usada com autenticação e RLS obrigatória. Configure o SQL incluído no pacote antes de sincronizar.</p>
+<button class="btn secondary full" id="cloudConfig">Salvar configuração</button>
+<div class="line"></div>
+<label class="hint">E-mail<input class="field" id="cloudEmail" type="email" autocomplete="email" placeholder="seu@email.com"></label>
+<label class="hint">Senha<input class="field" id="cloudPass" type="password" autocomplete="current-password" placeholder="No mínimo 8 caracteres"></label>
+<div class="row" style="margin-top:10px;flex-wrap:wrap"><button class="btn secondary" id="cloudRegister">Criar conta</button><button class="btn" id="cloudLogin">Entrar</button><button class="btn outline" id="cloudLogout">Sair</button></div>
+<div id="cloudStatus" class="hint" role="status" aria-live="polite" style="margin-top:12px">Não conectado à nuvem.</div>
+<div class="line"></div>
+<p class="hint"><b>Primeira vez:</b> exporte um backup antes. Depois toque em "Enviar dados". Em outro dispositivo, entre com a mesma conta e use "Baixar dados". Baixar substitui os registros locais e sempre pede confirmação.</p>
+<div class="row" style="flex-wrap:wrap"><button class="btn secondary" id="cloudPush">☁ Enviar dados</button><button class="btn outline" id="cloudPull">↓ Baixar dados</button></div>
+</div><div class="card"><h3>Instalar no Android</h3><p class="steps">Quando o app estiver publicado em endereço HTTPS, abra-o no Chrome e toque em ⋮ → <b>Adicionar à tela inicial</b> ou <b>Instalar app</b>. Abrir um arquivo HTML local não oferece instalação PWA completa.</p></div><div class="card"><h3>Sobre a versão 3.0</h3><p class="steps">Novidades: sincronização opcional entre dispositivos, backup seguro por usuário, registros corporais e gráficos, além dos recursos da versão 2.0. Funciona sem conta e salva dados neste navegador.</p><p class="hint">Para ativar instalação e funcionamento offline como aplicativo, hospede esta pasta completa num servidor HTTPS.</p></div><div class="card"><h3>Cronômetro de descanso</h3><div class="row"><button class="btn secondary" onclick="startTimer(60)">1 min</button><button class="btn secondary" onclick="startTimer(90)">1min30</button><button class="btn secondary" onclick="startTimer(120)">2 min</button></div></div></section>
+</main><nav><button data-tab="treino" class="active"><span>🏋️</span>Treino</button><button data-tab="evolucao"><span>📈</span>Evolução</button><button data-tab="guia"><span>📚</span>Guia</button><button data-tab="ajustes"><span>⚙️</span>Ajustes</button></nav><script>
+const WORKOUTS=[
+  {
+    "id": 0,
+    "short": "SEG",
+    "name": "Push A",
+    "focus": "Peitoral prioritário",
+    "exercises": [
+      {
+        "id": "0-0",
+        "name": "Supino articulado convergente",
+        "sets": 3,
+        "reps": "6–10",
+        "rest": "2–3 min",
+        "steps": "Ajuste as alças na linha do peito. Empurre mantendo ombros apoiados e retorne controlando.",
+        "alternative": "Supino horizontal máquina"
+      },
+      {
+        "id": "0-1",
+        "name": "Supino inclinado máquina",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Regule o banco inclinado e empurre sem elevar os ombros. Controle a descida.",
+        "alternative": "Supino inclinado articulado"
+      },
+      {
+        "id": "0-2",
+        "name": "Crucifixo peck deck",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "75–90 s",
+        "steps": "Ajuste o banco; aproxime os braços à frente do peito sem bater as alças.",
+        "alternative": "Crossover na polia"
+      },
+      {
+        "id": "0-3",
+        "name": "Desenvolvimento de ombro máquina",
+        "sets": 2,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Mantenha tronco apoiado e punhos alinhados. Empurre para cima com controle.",
+        "alternative": "Shoulder press articulado"
+      },
+      {
+        "id": "0-4",
+        "name": "Elevação lateral máquina",
+        "sets": 3,
+        "reps": "12–20",
+        "rest": "60–90 s",
+        "steps": "Eleve até aproximadamente a linha dos ombros sem impulso.",
+        "alternative": "Elevação lateral na polia"
+      },
+      {
+        "id": "0-5",
+        "name": "Tríceps polia barra V",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "75–90 s",
+        "steps": "Cotovelos próximos ao corpo; estenda e retorne lentamente.",
+        "alternative": "Tríceps máquina"
+      },
+      {
+        "id": "0-6",
+        "name": "Tríceps corda acima da cabeça",
+        "sets": 2,
+        "reps": "10–15",
+        "rest": "75–90 s",
+        "steps": "Cotovelos estáveis; estenda sem compensar com a lombar.",
+        "alternative": "Tríceps unilateral na polia"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "short": "TER",
+    "name": "Legs A",
+    "focus": "Quadríceps",
+    "exercises": [
+      {
+        "id": "1-0",
+        "name": "Leg press 45°",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2–3 min",
+        "steps": "Pés na largura dos ombros; flexione até amplitude confortável, mantendo lombar apoiada.",
+        "alternative": "Hack squat"
+      },
+      {
+        "id": "1-1",
+        "name": "Hack squat ou Smith",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2–3 min",
+        "steps": "Joelhos alinhados aos pés; desça e suba com controle, sem dor.",
+        "alternative": "Leg press"
+      },
+      {
+        "id": "1-2",
+        "name": "Cadeira extensora",
+        "sets": 2,
+        "reps": "10–15",
+        "rest": "90 s",
+        "steps": "Alinhe o eixo com o joelho; eleve e desça de forma controlada.",
+        "alternative": "Leg press com foco em quadríceps"
+      },
+      {
+        "id": "1-3",
+        "name": "Mesa flexora",
+        "sets": 2,
+        "reps": "10–15",
+        "rest": "90 s",
+        "steps": "Mantenha quadril no apoio; flexione o joelho e retorne lentamente.",
+        "alternative": "Cadeira flexora"
+      },
+      {
+        "id": "1-4",
+        "name": "Cadeira adutora",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "75 s",
+        "steps": "Feche as pernas com controle, sem bater os pesos.",
+        "alternative": "Adutora em polia"
+      },
+      {
+        "id": "1-5",
+        "name": "Panturrilha sentada",
+        "sets": 3,
+        "reps": "10–15",
+        "rest": "75–90 s",
+        "steps": "Eleve os calcanhares ao máximo e alongue lentamente na descida.",
+        "alternative": "Panturrilha leg press"
+      },
+      {
+        "id": "1-6",
+        "name": "Abdominal máquina",
+        "sets": 3,
+        "reps": "10–15",
+        "rest": "60–90 s",
+        "steps": "Flexione o tronco aproximando costelas do quadril sem puxar com os braços.",
+        "alternative": "Crunch na polia"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "short": "QUA",
+    "name": "Pull A",
+    "focus": "Costas e bíceps",
+    "exercises": [
+      {
+        "id": "2-0",
+        "name": "Puxada alta neutra",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Puxe os cotovelos para baixo e mantenha o tronco estável.",
+        "alternative": "Puxada articulada"
+      },
+      {
+        "id": "2-1",
+        "name": "Remada articulada com apoio",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Peito apoiado; conduza os cotovelos para trás sem impulso.",
+        "alternative": "Remada baixa máquina"
+      },
+      {
+        "id": "2-2",
+        "name": "Pulldown braço reto",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "75 s",
+        "steps": "Braços quase estendidos; mova a barra em arco até próximo das coxas.",
+        "alternative": "Pullover máquina"
+      },
+      {
+        "id": "2-3",
+        "name": "Crucifixo inverso máquina",
+        "sets": 3,
+        "reps": "12–20",
+        "rest": "75–90 s",
+        "steps": "Abra os braços mantendo ombros baixos e peito apoiado.",
+        "alternative": "Face pull"
+      },
+      {
+        "id": "2-4",
+        "name": "Rosca Scott máquina",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "90 s",
+        "steps": "Braços apoiados; suba e desça sem perder a posição.",
+        "alternative": "Rosca Scott na polia"
+      },
+      {
+        "id": "2-5",
+        "name": "Rosca EZ na polia",
+        "sets": 3,
+        "reps": "10–15",
+        "rest": "75–90 s",
+        "steps": "Cotovelos estáveis junto ao corpo; não balance o tronco.",
+        "alternative": "Rosca máquina"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "short": "QUI",
+    "name": "Push B",
+    "focus": "Peito e braços",
+    "exercises": [
+      {
+        "id": "3-0",
+        "name": "Supino inclinado articulado",
+        "sets": 3,
+        "reps": "6–10",
+        "rest": "2–3 min",
+        "steps": "Peito alto, escápulas apoiadas; empurre e retorne controlando.",
+        "alternative": "Supino inclinado máquina"
+      },
+      {
+        "id": "3-1",
+        "name": "Supino horizontal máquina",
+        "sets": 2,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Alças na altura do peito; empurre sem perder apoio.",
+        "alternative": "Supino articulado"
+      },
+      {
+        "id": "3-2",
+        "name": "Crossover na polia",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "75–90 s",
+        "steps": "Mantenha cotovelos levemente flexionados; aproxime as mãos à frente.",
+        "alternative": "Peck deck"
+      },
+      {
+        "id": "3-3",
+        "name": "Elevação lateral máquina",
+        "sets": 3,
+        "reps": "12–20",
+        "rest": "60–90 s",
+        "steps": "Eleve lateralmente sem encolher os ombros.",
+        "alternative": "Elevação lateral na polia"
+      },
+      {
+        "id": "3-4",
+        "name": "Tríceps máquina/mergulho assistido",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "90 s",
+        "steps": "Ajuste a máquina; estenda cotovelos sem afundar os ombros.",
+        "alternative": "Tríceps barra V"
+      },
+      {
+        "id": "3-5",
+        "name": "Tríceps corda polia",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "75 s",
+        "steps": "Estenda para baixo com cotovelos fixos.",
+        "alternative": "Tríceps barra V"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "short": "SEX",
+    "name": "Legs B",
+    "focus": "Posteriores e glúteos",
+    "exercises": [
+      {
+        "id": "4-0",
+        "name": "Cadeira flexora",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "90 s",
+        "steps": "Flexione os joelhos sem levantar o quadril do apoio.",
+        "alternative": "Mesa flexora"
+      },
+      {
+        "id": "4-1",
+        "name": "Mesa flexora",
+        "sets": 2,
+        "reps": "10–15",
+        "rest": "90 s",
+        "steps": "Mantenha a pelve estável; faça movimento controlado.",
+        "alternative": "Cadeira flexora"
+      },
+      {
+        "id": "4-2",
+        "name": "Leg press unilateral",
+        "sets": 2,
+        "reps": "10–12/lado",
+        "rest": "90 s",
+        "steps": "Comece pelo lado esquerdo. Mantenha a mesma amplitude e repetições em ambos.",
+        "alternative": "Leg press bilateral leve"
+      },
+      {
+        "id": "4-3",
+        "name": "Hip thrust máquina",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Eleve o quadril mantendo o tronco estável; não hiperestenda a lombar.",
+        "alternative": "Glute drive"
+      },
+      {
+        "id": "4-4",
+        "name": "Cadeira extensora",
+        "sets": 2,
+        "reps": "12–15",
+        "rest": "90 s",
+        "steps": "Alinhe o equipamento e estenda o joelho em amplitude confortável.",
+        "alternative": "Leg press"
+      },
+      {
+        "id": "4-5",
+        "name": "Panturrilha leg press",
+        "sets": 3,
+        "reps": "10–15",
+        "rest": "75–90 s",
+        "steps": "Movimente o tornozelo sem flexionar excessivamente os joelhos.",
+        "alternative": "Panturrilha sentada"
+      },
+      {
+        "id": "4-6",
+        "name": "Prancha",
+        "sets": 3,
+        "reps": "20–40 s",
+        "rest": "60 s",
+        "steps": "Mantenha tronco firme e respiração natural, sem deixar a lombar ceder.",
+        "alternative": "Dead bug"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "short": "SÁB",
+    "name": "Pull B",
+    "focus": "Bíceps prioritário",
+    "exercises": [
+      {
+        "id": "5-0",
+        "name": "Remada baixa máquina/cabo neutro",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Puxe as alças na direção do tronco mantendo coluna neutra.",
+        "alternative": "Remada articulada"
+      },
+      {
+        "id": "5-1",
+        "name": "Puxada alta pegada média",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "2 min",
+        "steps": "Puxe à parte alta do peito sem balançar o tronco.",
+        "alternative": "Puxada neutra"
+      },
+      {
+        "id": "5-2",
+        "name": "Remada unilateral máquina",
+        "sets": 2,
+        "reps": "10–12/lado",
+        "rest": "90 s",
+        "steps": "Puxe cada lado mantendo quadril e tronco estáveis.",
+        "alternative": "Remada unilateral na polia"
+      },
+      {
+        "id": "5-3",
+        "name": "Crucifixo inverso máquina",
+        "sets": 2,
+        "reps": "12–20",
+        "rest": "75 s",
+        "steps": "Abra os braços para trás sem impulso.",
+        "alternative": "Face pull"
+      },
+      {
+        "id": "5-4",
+        "name": "Rosca bíceps máquina unilateral",
+        "sets": 3,
+        "reps": "8–12",
+        "rest": "90 s",
+        "steps": "Braço bem apoiado; eleve e abaixe com controle.",
+        "alternative": "Rosca Scott cabo unilateral"
+      },
+      {
+        "id": "5-5",
+        "name": "Rosca corda na polia",
+        "sets": 3,
+        "reps": "10–15",
+        "rest": "75 s",
+        "steps": "Flexione cotovelos sem usar balanço.",
+        "alternative": "Rosca EZ na polia"
+      },
+      {
+        "id": "5-6",
+        "name": "Crunch ajoelhado na polia",
+        "sets": 3,
+        "reps": "12–15",
+        "rest": "75 s",
+        "steps": "Flexione o tronco aproximando costelas do quadril, sem puxar com os braços.",
+        "alternative": "Abdominal máquina"
+      }
+    ]
+  }
+];
+const KEY='lucas_hipertrofia_v1';let state;try{state=JSON.parse(localStorage.getItem(KEY))}catch(e){}state=state&&typeof state==='object'?state:{sessions:[],measurements:[],drafts:{}};state.sessions||=[];state.measurements||=[];state.drafts||={};let active=0,seconds=0,timerId=null,running=false;
+function store(){localStorage.setItem(KEY,JSON.stringify(state))}function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderDay(){let w=WORKOUTS[active];document.getElementById('workoutTitle').textContent=w.short+' • '+w.name;document.getElementById('workoutFocus').textContent=w.focus;document.getElementById('workoutCount').textContent=w.exercises.length+' exercícios';document.getElementById('week').innerHTML=WORKOUTS.map(x=>`<button class="day ${active===x.id?'active':''}" data-day="${x.id}"><strong>${x.short}</strong><span>${x.name}</span></button>`).join('');document.querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{active=+b.dataset.day;renderDay()});document.getElementById('exerciseList').innerHTML=w.exercises.map((ex,i)=>{let draft=state.drafts[ex.id]||[];return `<article class="ex"><div class="exhead" data-expand="${ex.id}"><div class="num">${i+1}</div><div style="flex:1"><h3>${esc(ex.name)}</h3><small>${ex.sets} séries × ${esc(ex.reps)} • ${esc(ex.rest)}</small></div><b style="color:#7ceeaa">⌄</b></div><div class="exbody" id="body-${ex.id}" ${i===0?'':'hidden'}><div class="steps"><strong>Execução:</strong> ${esc(ex.steps)}<br><strong>Substituto:</strong> ${esc(ex.alternative)}</div><div class="sets">${Array.from({length:ex.sets},(_,j)=>`<div class="setline"><label>Série ${j+1}</label><input type="number" min="0" step=".5" inputmode="decimal" placeholder="kg" aria-label="Carga série ${j+1}" data-id="${ex.id}" data-set="${j}" data-field="kg" value="${esc(draft[j]?.kg??'')}"><input type="number" min="0" step="1" inputmode="numeric" placeholder="reps" aria-label="Repetições série ${j+1}" class="reps" data-id="${ex.id}" data-set="${j}" data-field="reps" value="${esc(draft[j]?.reps??'')}"><input type="checkbox" class="check" title="Série concluída" data-id="${ex.id}" data-set="${j}" data-field="done" ${draft[j]?.done?'checked':''}></div>`).join('')}</div><button class="btn secondary" data-rest="${ex.rest}">⏱ Iniciar descanso</button></div></article>`}).join('');document.querySelectorAll('[data-expand]').forEach(b=>b.onclick=()=>{let el=document.getElementById('body-'+b.dataset.expand);el.hidden=!el.hidden});document.querySelectorAll('[data-field]').forEach(el=>el.onchange=()=>{let id=el.dataset.id,idx=+el.dataset.set;state.drafts[id]??=[];state.drafts[id][idx]??={};state.drafts[id][idx][el.dataset.field]=el.type==='checkbox'?el.checked:el.value;store()});document.querySelectorAll('[data-rest]').forEach(b=>b.onclick=()=>startTimer(parseInt(b.dataset.rest.includes('2–3')?'120':b.dataset.rest,10)* (b.dataset.rest.includes('min')?60:1)))}
+function timerPaint(){document.getElementById('timer').classList.toggle('hidden',seconds<=0);document.getElementById('timeLeft').textContent=`${Math.floor(seconds/60).toString().padStart(2,'0')}:${(seconds%60).toString().padStart(2,'0')}`;document.getElementById('pauseTimer').textContent=running?'Pausar':'Continuar'}function startTimer(n){clearInterval(timerId);seconds=n;running=true;timerPaint();timerId=setInterval(()=>{if(!running)return;seconds--;timerPaint();if(seconds<=0){clearInterval(timerId);if(navigator.vibrate)navigator.vibrate([200,120,200])}},1000)}document.getElementById('pauseTimer').onclick=()=>{running=!running;timerPaint()};document.getElementById('stopTimer').onclick=()=>{seconds=0;running=false;clearInterval(timerId);timerPaint()};
+document.getElementById('saveWorkout').onclick=()=>{let workout=WORKOUTS[active],entries=workout.exercises.map(ex=>({name:ex.name,sets:state.drafts[ex.id]||[]}));let done=entries.reduce((t,e)=>t+e.sets.filter(s=>s?.done).length,0);if(!done){alert('Marque pelo menos uma série concluída antes de salvar.');return}state.sessions.unshift({day:workout.name,date:new Date().toISOString(),completed:done,entries});workout.exercises.forEach(ex=>delete state.drafts[ex.id]);store();renderDay();alert('Sessão salva! 💪')};
+document.getElementById('saveMeasure').onclick=()=>{let weight=document.getElementById('weight').value,waist=document.getElementById('waist').value;if(!weight&&!waist){alert('Informe pelo menos uma medida.');return}state.measurements.unshift({date:new Date().toISOString(),weight,waist});store();document.getElementById('weight').value='';document.getElementById('waist').value='';renderProgress()};function renderProgress(){let session=state.sessions,measure=state.measurements;document.getElementById('statGrid').innerHTML=`<div class="metric"><b>${session.length}</b><span>Sessões registradas</span></div><div class="metric"><b>${session.reduce((a,s)=>a+s.completed,0)}</b><span>Séries concluídas</span></div><div class="metric"><b>${measure[0]?.weight?esc(measure[0].weight)+' kg':'—'}</b><span>Último peso</span></div><div class="metric"><b>${measure[0]?.waist?esc(measure[0].waist)+' cm':'—'}</b><span>Última cintura</span></div>`;document.getElementById('measureHistory').innerHTML=measure.length?measure.slice(0,15).map(m=>`<div class="log">${new Date(m.date).toLocaleDateString('pt-BR')} • ${m.weight?esc(m.weight)+' kg':'—'} • ${m.waist?esc(m.waist)+' cm':'—'}</div>`).join(''):'<p class="hint">Nenhum registro ainda.</p>';document.getElementById('sessionHistory').innerHTML=session.length?session.slice(0,25).map(s=>`<div class="log"><b>${esc(s.day)}</b> • ${new Date(s.date).toLocaleDateString('pt-BR')}<br><small>${s.completed} séries concluídas</small><details><summary>Ver cargas e repetições</summary>${s.entries.map(e=>`<div class="hint">${esc(e.name)}: ${e.sets.filter(z=>z?.done).map(z=>`${esc(z.kg||'?')} kg × ${esc(z.reps||'?')}`).join(' | ')||'—'}</div>`).join('')}</details></div>`).join(''):'<p class="hint">Treine e salve uma sessão para começar.</p>'}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('main>section').forEach(s=>s.classList.toggle('hidden',s.id!=='tab-'+b.dataset.tab));if(b.dataset.tab==='evolucao')renderProgress();window.scrollTo(0,0)});
+document.getElementById('exportData').onclick=()=>{let blob=new Blob([JSON.stringify({app:'Projeto Hipertrofia Lucas',version:1,data:state},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='backup-hipertrofia-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500)};document.getElementById('importData').onchange=async e=>{let file=e.target.files?.[0];if(!file)return;try{let raw=JSON.parse(await file.text());if(raw.app!=='Projeto Hipertrofia Lucas'||!raw.data||!Array.isArray(raw.data.sessions)||!Array.isArray(raw.data.measurements))throw Error('Formato não reconhecido');if(confirm('Substituir os registros atuais por esse backup?')){state=raw.data;state.drafts||={};store();renderDay();renderProgress();alert('Backup importado.')}}catch(err){alert('Não foi possível importar: '+err.message)}e.target.value=''};
+renderDay();renderProgress();if('serviceWorker'in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+
+// 2.0: dados e visualização sem bibliotecas externas.
+state.details=Array.isArray(state.details)?state.details:[];
+const DETAIL_FIELDS=[['peito','Peito (cm)'],['bracoE','Braço E (cm)'],['bracoD','Braço D (cm)'],['coxaE','Coxa E (cm)'],['coxaD','Coxa D (cm)'],['pantE','Panturrilha E (cm)'],['pantD','Panturrilha D (cm)']];
+const artPath=i=>'ilustracoes/dia-'+i+'.png';
+const allEx=WORKOUTS.flatMap(w=>w.exercises.map(e=>({id:e.id,name:e.name,day:w.name})));
+const opt=allEx.map(e=>'<option value="'+esc(e.id)+'">'+esc(e.day+' • '+e.name)+'</option>').join('');
+document.getElementById('exerciseMetric').innerHTML=opt;
+document.getElementById('detailInput').innerHTML=DETAIL_FIELDS.map(([key,label])=>'<div><label class="helper" for="d-'+key+'">'+label+'</label><input class="field" type="number" step="0.1" min="0" inputmode="decimal" id="d-'+key+'" placeholder="Opcional"></div>').join('');
+function spark(data,units){
+ const rows=data.filter(v=>Number.isFinite(v.value)).slice(-14);
+ if(!rows.length)return '<p class="helper">Ainda sem registros para este gráfico. 💪</p>';
+ const width=420,height=185,pad=36;const vals=rows.map(x=>x.value),min=Math.min(...vals),max=Math.max(...vals),delta=Math.max(max-min,1),lo=min-delta*.16,hi=max+delta*.16;
+ const X=i=>rows.length===1?width/2:pad+(width-2*pad)*i/(rows.length-1);const Y=v=>height-pad-(height-2*pad)*(v-lo)/(hi-lo);
+ const point=rows.map((p,i)=>X(i).toFixed(1)+','+Y(p.value).toFixed(1)).join(' ');
+ let axes=[0,.5,1].map(t=>{let v=lo+(hi-lo)*t,y=Y(v);return '<line class="axis" x1="'+pad+'" y1="'+y+'" x2="'+(width-pad)+'" y2="'+y+'" opacity=".55"/><text class="chartlabel" x="3" y="'+(y+4)+'">'+v.toFixed(1)+'</text>'}).join('');
+ const first=esc(rows[0].label),last=esc(rows[rows.length-1].label);
+ return '<svg viewBox="0 0 '+width+' '+height+'" role="img" aria-label="Evolução de '+esc(units)+'">'+axes+'<polyline class="chart-line" points="'+point+'"/>'+rows.map((p,i)=>'<circle class="chart-point" cx="'+X(i)+'" cy="'+Y(p.value)+'" r="4"/>').join('')+'<text class="chartlabel" x="'+pad+'" y="'+(height-6)+'">'+first+'</text><text class="chartlabel" text-anchor="end" x="'+(width-pad)+'" y="'+(height-6)+'">'+last+'</text><text class="chartvalue" text-anchor="end" x="'+(width-pad)+'" y="17">Último: '+rows[rows.length-1].value.toLocaleString('pt-BR',{maximumFractionDigits:1})+' '+esc(units)+'</text></svg>';
+}
+function bodySeries(field){return [...state.measurements].reverse().filter(m=>m[field]!==''&&m[field]!=null&&Number.isFinite(Number(m[field]))).map(m=>({value:Number(m[field]),label:new Date(m.date).toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})}));}
+function strengthSeries(id){let name=allEx.find(x=>x.id===id)?.name;if(!name)return [];return [...state.sessions].reverse().flatMap(s=>{let ent=s.entries?.find(e=>e.name===name);if(!ent)return [];let sets=(ent.sets||[]).filter(z=>z?.done&&Number(z.kg)>0&&Number(z.reps)>0);if(!sets.length)return [];let best=sets.reduce((a,b)=>Number(a.kg)>Number(b.kg)?a:b);return [{value:Number(best.kg),reps:Number(best.reps),label:new Date(s.date).toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})}];});}
+function drawAnalytics(){let fld=document.getElementById('measureMetric').value;document.getElementById('bodyChart').innerHTML=spark(bodySeries(fld),fld==='weight'?'kg':'cm');let id=document.getElementById('exerciseMetric').value,series=strengthSeries(id);document.getElementById('strengthChart').innerHTML=spark(series,'kg');let first=series[0],last=series[series.length-1];document.getElementById('strengthSummary').innerHTML=first&&last?'<div><small>Primeira carga</small><b>'+first.value+' kg</b></div><div><small>Última carga</small><b>'+last.value+' kg</b></div><div><small>Variação</small><b>'+((last.value-first.value)>=0?'+':'')+(last.value-first.value).toFixed(1)+' kg</b></div>':'<p class="helper">Complete uma série com carga e repetições para começar.</p>';
+ let detail=state.details.slice(0,5);document.getElementById('detailHistory').innerHTML=detail.length?'<h3 style="margin-top:14px">Histórico</h3>'+detail.map(d=>'<div class="log">'+new Date(d.date).toLocaleDateString('pt-BR')+' • '+DETAIL_FIELDS.filter(([k])=>d[k]!==undefined).map(([k,n])=>n.split(' ')[0]+': '+esc(d[k])).join(' · ')+'</div>').join(''):'';
+}
+document.getElementById('exerciseMetric').onchange=drawAnalytics;
+document.getElementById('measureMetric').onchange=drawAnalytics;
+document.getElementById('saveDetail').onclick=()=>{let r={date:new Date().toISOString()};for(let [k] of DETAIL_FIELDS){let v=document.getElementById('d-'+k).value;if(v){if(Number(v)<=0||Number(v)>300){alert('Verifique a medida informada.');return;}r[k]=Number(v);}}if(Object.keys(r).length===1){alert('Informe pelo menos uma medida.');return;}state.details.unshift(r);store();for(let [k] of DETAIL_FIELDS)document.getElementById('d-'+k).value='';drawAnalytics();};
+const previousRenderDay=renderDay;
+renderDay=function(){previousRenderDay();document.getElementById('dayArt').src=artPath(active);let w=WORKOUTS[active],complete=state.sessions.filter(s=>s.day===w.name);document.getElementById('lastExerciseInsight').textContent=complete.length?'✅ Último treino '+w.name+': '+new Date(complete[0].date).toLocaleDateString('pt-BR')+'. Compare as cargas pelo painel Evolução.':'💡 Primeiro treino deste dia ainda não registrado. Registre as séries para acompanhar progresso.';
+ document.querySelectorAll('[data-expand]').forEach(head=>{let id=head.dataset.expand,b=document.getElementById('body-'+id);if(!b)return;let ex=allEx.find(x=>x.id===id);let refs=strengthSeries(id);if(ex&&refs.length){let note=document.createElement('div');note.className='progress-pill';note.textContent='Última melhor série: '+refs[refs.length-1].value+' kg × '+refs[refs.length-1].reps+' reps';b.insertBefore(note,b.querySelector('.sets'));}});
+};
+const previousRenderProgress=renderProgress;renderProgress=function(){previousRenderProgress();drawAnalytics();};
+// File imports from v1 should retain new fields if present.
+// Fix the countdown to continue accurately when the tab is backgrounded.
+let timerDeadline=0;const oldStartTimer=startTimer;startTimer=function(n){oldStartTimer(n);timerDeadline=Date.now()+n*1000;};
+const oldPause=document.getElementById('pauseTimer').onclick;document.getElementById('pauseTimer').onclick=()=>{oldPause();if(running)timerDeadline=Date.now()+seconds*1000;};
+const visibilitySync=()=>{if(running&&seconds>0){seconds=Math.max(0,Math.ceil((timerDeadline-Date.now())/1000));timerPaint();if(!seconds){clearInterval(timerId);running=false;}}};document.addEventListener('visibilitychange',visibilitySync);
+const v2OriginalSave=document.getElementById('saveWorkout').onclick;
+document.getElementById('saveWorkout').onclick=()=>{v2OriginalSave();renderDay();};
+const v2OriginalImport=document.getElementById('importData').onchange;
+document.getElementById('importData').onchange=async ev=>{await v2OriginalImport(ev);state.details=Array.isArray(state.details)?state.details:[];drawAnalytics();};
+const v2OriginalExport=document.getElementById('exportData').onclick;
+document.getElementById('exportData').onclick=()=>{let blob=new Blob([JSON.stringify({app:'Projeto Hipertrofia Lucas',version:2,data:state},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='backup-hipertrofia-v2-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);};
+renderDay();renderProgress();
+
+// V3: Supabase opt-in, no automatic transmission, per-user RLS database and explicit upload/download.
+const CLOUD_CONFIG_KEY='lucas_hipertrofia_cloud_v3';
+let cloudSession=null;
+function cfgRead(){try{return JSON.parse(localStorage.getItem(CLOUD_CONFIG_KEY)||'{}')}catch{return {}}}
+function config(){let c=cfgRead();return {url:(c.url||'').replace(/\/$/,''), key:c.key||''}}
+function setCloudStatus(message){document.getElementById('cloudStatus').textContent=message}
+function cloudSettings(){let c=config();if(!/^https:\/\/[a-z0-9.-]+\.supabase\.co$/i.test(c.url)||!c.key||/service_role|sb_secret_/i.test(c.key))throw Error('Informe URL HTTPS de projeto Supabase e somente uma chave pública.');return c}
+async function cloudRequest(path,opts={}){let c=cloudSettings();let headers={apikey:c.key,...opts.headers};let res=await fetch(c.url+path,{...opts,headers});let body=await res.text(),data;try{data=JSON.parse(body)}catch{data={message:body}}if(!res.ok)throw Error(data.msg||data.message||data.error_description||`Erro HTTP ${res.status}`);return data}
+function token(){if(!cloudSession?.access_token)throw Error('Entre na sua conta primeiro.');return cloudSession.access_token}
+async function cloudAuth(action){let email=document.getElementById('cloudEmail').value.trim(), password=document.getElementById('cloudPass').value;if(!email||password.length<8)throw Error('Informe e-mail e senha de pelo menos 8 caracteres.');let endpoint=action==='register'?'/auth/v1/signup':'/auth/v1/token?grant_type=password';let data=await cloudRequest(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password})});document.getElementById('cloudPass').value='';if(data.access_token){cloudSession=data;setCloudStatus('Conectado: '+email+'. Sincronização manual disponível.')}else setCloudStatus('Cadastro solicitado. Verifique seu e-mail e depois faça login, se a confirmação estiver ativada.');}
+async function cloudPush(){let auth=token();let uid=cloudSession.user?.id;if(!uid)throw Error('Identificação de conta ausente. Entre novamente.');if(!confirm('Enviar seus registros locais para a nuvem? Isso substituirá a cópia remota dessa conta. Faça backup antes.'))return;let payload={user_id:uid,data:state,updated_at:new Date().toISOString()};await cloudRequest('/rest/v1/workout_backups?on_conflict=user_id',{method:'POST',headers:{Authorization:'Bearer '+auth,'Content-Type':'application/json',Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify(payload)});setCloudStatus('Backup enviado à nuvem com sucesso em '+new Date().toLocaleString('pt-BR'))}
+async function cloudPull(){let auth=token();let uid=cloudSession.user?.id;if(!uid)throw Error('Entre novamente.');let data=await cloudRequest('/rest/v1/workout_backups?user_id=eq.'+encodeURIComponent(uid)+'&select=data,updated_at',{headers:{Authorization:'Bearer '+auth}});if(!Array.isArray(data)||!data[0])throw Error('Nenhum backup remoto encontrado. Envie dados no aparelho original.');let next=data[0].data;if(!next||!Array.isArray(next.sessions)||!Array.isArray(next.measurements))throw Error('Cópia remota inválida.');if(!confirm('Substituir TODOS os registros locais pela cópia da nuvem de '+new Date(data[0].updated_at).toLocaleString('pt-BR')+'? Faça backup antes.'))return;state={sessions:next.sessions,measurements:next.measurements,details:Array.isArray(next.details)?next.details:[],drafts:next.drafts||{}};store();renderDay();renderProgress();setCloudStatus('Backup remoto importado. Faça novo backup local para segurança.')}
+function cloudGuard(fn){return async()=>{try{await fn()}catch(e){setCloudStatus('Atenção: '+e.message)}}}
+document.getElementById('cloudConfig').onclick=cloudGuard(async()=>{let url=document.getElementById('cloudUrl').value.trim().replace(/\/$/,''),key=document.getElementById('cloudKey').value.trim();if(!/^https:\/\/[a-z0-9.-]+\.supabase\.co$/i.test(url)||!key||/service_role|sb_secret_/i.test(key))throw Error('Verifique a URL e use exclusivamente a chave pública.');localStorage.setItem(CLOUD_CONFIG_KEY,JSON.stringify({url,key}));cloudSession=null;setCloudStatus('Configuração salva neste navegador. Entre na sua conta para sincronizar.');});
+document.getElementById('cloudRegister').onclick=cloudGuard(()=>cloudAuth('register'));
+document.getElementById('cloudLogin').onclick=cloudGuard(()=>cloudAuth('login'));
+document.getElementById('cloudLogout').onclick=()=>{cloudSession=null;document.getElementById('cloudPass').value='';setCloudStatus('Sessão desconectada. Dados locais preservados.')};
+document.getElementById('cloudPush').onclick=cloudGuard(cloudPush);
+document.getElementById('cloudPull').onclick=cloudGuard(cloudPull);
+let cc=config();document.getElementById('cloudUrl').value=cc.url;document.getElementById('cloudKey').value=cc.key;
+</script></body></html>
